@@ -1,0 +1,42 @@
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:gravity="center_horizontal|center_vertical"
+    android:background="#53aade"
+    android:orientation="vertical">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:gravity="center_horizontal|center_vertical"
+        android:orientation="vertical">
+
+        <fragment
+            android:id="@+id/currentLocation"
+            android:layout_margin="10dp"
+            android:layout_width="match_parent"
+            android:layout_height="250dp"
+            class="com.google.android.gms.maps.MapFragment" />
+
+        <TextView
+            android:id="@+id/lblLocation"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:gravity="center_horizontal"
+            android:padding="15dp"
+            android:background="@drawable/shape_textbox_location"
+            android:layout_margin="15dp"
+            android:textSize="16dp" />
+
+        <Button
+            android:id="@+id/btnLocationUpdate"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:paddingLeft="20dp"
+            android:paddingRight="20dp"
+            android:text="Set Location" />
+
+
+    </LinearLayout>
+
+</LinearLayout>

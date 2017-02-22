@@ -8,9 +8,6 @@
     <color name="frame_solid">#eee</color>
     <color name="frame_background">#bcbcbc</color>
     <color name="pending">#FFA64C</color>
-    <color name="approved">#059900</color>
-    <color name="rejected">#EE2F25</color>
-
     <color name="year">#999999</color>
     <color name="title">#222222</color>
 </resources>

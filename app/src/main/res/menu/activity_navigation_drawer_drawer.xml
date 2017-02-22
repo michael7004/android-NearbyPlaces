@@ -1,0 +1,40 @@
+<?xml version="1.0" encoding="utf-8"?>
+<menu xmlns:android="http://schemas.android.com/apk/res/android">
+
+    <group android:checkableBehavior="single">
+        <item
+            android:id="@+id/all_places"
+            android:icon="@drawable/ic_menu_all"
+            android:title="All Places" />
+    </group>
+
+    <item android:title="Are you looking for a __________?">
+        <menu>
+            <item
+                android:id="@+id/category_restaurant"
+                android:icon="@drawable/ic_menu_restaurant"
+                android:title="Restaurant" />
+            <item
+                android:id="@+id/category_cafe"
+                android:icon="@drawable/ic_menu_cafe"
+                android:title="Cafe" />
+            <item
+                android:id="@+id/category_busstation"
+                android:icon="@drawable/ic_menu_busstation"
+                android:title="Bus Station" />
+            <item
+                android:id="@+id/category_bank"
+                android:icon="@drawable/ic_menu_bank"
+                android:title="Bank" />
+            <item
+                android:id="@+id/category_atm"
+                android:icon="@drawable/ic_menu_atm"
+                android:title="ATM" />
+            <item
+                android:id="@+id/category_hospitals"
+                android:icon="@drawable/ic_menu_hospital"
+                android:title="Hospital" />
+        </menu>
+    </item>
+
+</menu>

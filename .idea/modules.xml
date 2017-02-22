@@ -2,7 +2,7 @@
 <project version="4">
   <component name="ProjectModuleManager">
     <modules>
-      <module fileurl="file://$PROJECT_DIR$/UniConnII.iml" filepath="$PROJECT_DIR$/UniConnII.iml" />
+      <module fileurl="file://$PROJECT_DIR$/android-NearbyPlaces.iml" filepath="$PROJECT_DIR$/android-NearbyPlaces.iml" />
       <module fileurl="file://$PROJECT_DIR$/app/app.iml" filepath="$PROJECT_DIR$/app/app.iml" />
     </modules>
   </component>
