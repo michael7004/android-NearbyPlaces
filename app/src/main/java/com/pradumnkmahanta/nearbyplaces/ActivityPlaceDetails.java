@@ -1,14 +1,11 @@
 package com.pradumnkmahanta.nearbyplaces;
 
-import android.app.ProgressDialog;
 import android.content.Intent;
 import android.graphics.Bitmap;
 import android.graphics.BitmapFactory;
 import android.os.AsyncTask;
-import android.support.v4.app.NavUtils;
-import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
-import android.view.MenuItem;
+import android.support.v7.app.AppCompatActivity;
 import android.widget.ImageView;
 import android.widget.TextView;
 
@@ -37,16 +34,18 @@ public class ActivityPlaceDetails extends AppCompatActivity implements OnMapRead
 
     ImageView placeImage;
     TextView placeStatus;
+    TextView placeRating;
 
     LoadImage loadImage;
 
-    String placeName, placeVicinity, placeLat, placeLng, placePhotoRef, placeDistance, placeType;
+    String placeName, placeVicinity, placeLat, placeLng, placePhotoRef, placeDistance, placeType,rating;
 
     public static String KEY_NAME = "Name";
     public static String KEY_ADDRESS = "Address";
     public static String KEY_PHOTOREFERENCE = "PhotoReference";
     public static String KEY_LATITUDE = "Latitude";
     public static String KEY_LONGITUDE = "Longitude";
+    public static String KEY_RATING = "rating";
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -58,6 +57,7 @@ public class ActivityPlaceDetails extends AppCompatActivity implements OnMapRead
         placeLat = fromMain.getStringExtra(KEY_LATITUDE);
         placeLng = fromMain.getStringExtra(KEY_LONGITUDE);
         placePhotoRef = fromMain.getStringExtra(KEY_PHOTOREFERENCE);
+        rating = fromMain.getStringExtra(KEY_RATING);
         setTitle(placeName);
 
         //actionBar = getSupportActionBar();
@@ -67,6 +67,7 @@ public class ActivityPlaceDetails extends AppCompatActivity implements OnMapRead
 
         placeStatus = (TextView) findViewById(R.id.placeStatus);
         placeImage = (ImageView) findViewById(R.id.placeImage);
+        placeRating = (TextView) findViewById(R.id.placeRating);
 
         mapFragment = (MapFragment) getFragmentManager().findFragmentById(R.id.map);
         mapFragment.getMapAsync(this);
@@ -135,6 +136,7 @@ public class ActivityPlaceDetails extends AppCompatActivity implements OnMapRead
         protected void onPostExecute(Bitmap bitmapImage) {
             if(bitmapImage != null){
                 placeStatus.setText("Address : " + placeVicinity);
+                placeRating.setText("Rating  : " + rating);
                 placeImage.setImageBitmap(bitmapImage);
             }else{
                 placeStatus.setText("Sorry failed to retrieve Image.\nAddress : " + placeVicinity);

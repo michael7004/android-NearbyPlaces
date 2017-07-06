@@ -8,12 +8,21 @@
     <fragment
         android:id="@+id/map"
         android:layout_width="match_parent"
-        android:layout_height="200dp"
+        android:layout_height="0dp"
+
         class="com.google.android.gms.maps.MapFragment" />
 
     <TextView
         android:id="@+id/placeStatus"
         android:text="Name:"
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="10dip"
+        android:layout_marginBottom="5dip"/>
+
+    <TextView
+        android:id="@+id/placeRating"
+        android:text="Rating:"
         android:layout_width="fill_parent"
         android:layout_height="wrap_content"
         android:layout_marginTop="10dip"

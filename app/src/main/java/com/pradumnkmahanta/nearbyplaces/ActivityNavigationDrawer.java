@@ -32,6 +32,7 @@ public class ActivityNavigationDrawer extends AppCompatActivity implements Navig
 
     RecyclerView recyclerView;
 
+
     //TAGS
     public static String KEY_REFERENCE = "Reference";
     public static String KEY_NAME = "Name";
@@ -41,7 +42,7 @@ public class ActivityNavigationDrawer extends AppCompatActivity implements Navig
     public static String KEY_DISTANCE = "Distance";
     public static String KEY_LATITUDE = "Latitude";
     public static String KEY_LONGITUDE = "Longitude";
-
+    public static String KEY_RATING = "rating";
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -70,6 +71,7 @@ public class ActivityNavigationDrawer extends AppCompatActivity implements Navig
             @Override
             public void onClick(View view, int position) {
                 PlaceItem placeItem = mItems.get(position);
+
                 Toast.makeText(getApplicationContext(), placeItem.placeName + " is selected!", Toast.LENGTH_SHORT).show();
                 Intent selectedPlace = new Intent(getApplicationContext(), ActivityPlaceDetails.class);
                 selectedPlace.putExtra(KEY_NAME, placeItem.placeName);
@@ -77,6 +79,7 @@ public class ActivityNavigationDrawer extends AppCompatActivity implements Navig
                 selectedPlace.putExtra(KEY_PHOTOREFERENCE, placeItem.placePhotoRef);
                 selectedPlace.putExtra(KEY_LATITUDE, placeItem.placeLat);
                 selectedPlace.putExtra(KEY_LONGITUDE, placeItem.placeLng);
+                selectedPlace.putExtra(KEY_RATING, placeItem.placerating);
                 startActivity(selectedPlace);
             }
 
@@ -200,4 +203,7 @@ public class ActivityNavigationDrawer extends AppCompatActivity implements Navig
         drawer.closeDrawer(GravityCompat.START);
         return true;
     }
+
+
+
 }

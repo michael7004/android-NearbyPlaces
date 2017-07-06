@@ -1,8 +1,7 @@
 <resources>
     <string name="app_name">Nearby Places</string>
-
     <string name="navigation_drawer_open">Open navigation drawer</string>
     <string name="navigation_drawer_close">Close navigation drawer</string>
-    <string name="google_maps_key">AIzaSyCsLMKeaLICJbshm45rmBZ1gt9qhlI2P6k</string>
+    <string name="google_maps_key">AIzaSyBYcf-Oa5nkoMdWjle41Wt04jiBOcR1bbs</string>
     <string name="action_settings">Settings</string>
 </resources>
